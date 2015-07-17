@@ -4,6 +4,7 @@
   <title><%= json.project.title %></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <% /*= t.include("partials/_adHead.html") */ %>
 
@@ -22,30 +23,37 @@
 
   <responsive-child class="map-container">
   <div id='menu' class="dog-menu">
-    <a class="selected type-button" data-type="blocks_Med_HH_Inc">Median household income</a> 
-    <a class="type-button" data-type="blocks_PctNonHisp">% non-Hispanic white</a> 
-    <!-- <a class="type-button" data-type="lots">Lots with a view</a>  -->
+    <input class="hidden" type="checkbox" checked id="names">
+    <label for="names" class="name-button">Dollars contributed per person <span class="smallbutton">Select tab to hide or display</span></label> 
+    <a class="type-button" data-type="view_lots">Lots with view</a> 
+    <a class="type-button" data-type="nhw_pop">Non-Hispanic white<span class="smallbutton">Higher than 85%</span></a> 
+    <a class="type-button" data-type="med_hh">Median household income<span class="smallbutton">Greater than $110,000</span></a> 
   </div>
-
+<div class="map-box">
   <div class="aspect-ratio-outer">
     <div class="aspect-ratio-inner">
 
       <leaflet-map zoom=11>
-      <tile-layer layer="cartoPositron"></tile-layer>
-    </leaflet-map>
+        <tile-layer layer="cartoPositron"></tile-layer>
+      </leaflet-map>
 
+    </div>
   </div>
+
+  <!-- <aside class="legend">
+    <div id ="titletext" class="bigheader">Map legend</div>
+    <ul class="scale">
+      <li> <span class="block" style="background-color: #f9f8cf"></span><span id= "text5"> Lime</span>
+      <li> <span class="block" style="background-color: #a4d6b2"></span><span id= "text4"> Lime</span>
+      <li> <span class="block" style="background-color: #6cc1cd"></span> <span id= "text3">Lemon</span>
+      <li> <span class="block" style="background-color: #006eaa"></span><span id ="text2">Orange</span>
+      <li><span class="block" style="background-color: #0a3555"></span><span id= "text1">Cherry</span>
+      <!-- <hr>
+      <li> <span class="block" style="background-color: #bc8cbe"></span><span id= ""> Dog parks</span> -->
+   <!--  </ul>
+    <cite class="source">Sources: Seattle Animal Shelter, Nielsen <span class="legend-credit">Map by Garland Potts / The Seattle Times</span></cite>
+  </aside> --> 
 </div>
-
-<aside class="legend">
-
-  <h1>Change in <span id="instertext"></span> income households since 2000:</h1>
-  <ul class="scale">
-    <li> <span class="block change1" style="background-color: yellow"></span> Increase
-      <li> <span class="block" style="background-color: #B3B3B3"></span> No change or decrease
-      </ul>
-      <cite class="source">Sources: 2000 Census; 2013 5-year ACS<span class="legend-credit">Map by Garland Potts / The Seattle Times</span></cite>
-    </aside>
   </responsive-child>
 
   <script src="app.js"></script>
