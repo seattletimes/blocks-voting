@@ -18,6 +18,21 @@ body {
   font-family: @df-sans;
   padding: 0;
   margin: 0;
+  max-width: 900px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.chatter {
+  font-size: 15px;
+  color: @df-dark-gray;
+  font-family: @df-serif;
+  text-align: center;
 }
 
 .aspect-ratio-outer {
@@ -372,6 +387,13 @@ hr {
 
 .map-box {
   position: relative;
+}
+
+.leaflet-popup {
+  .emphasis {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 @import "leaflet-tweaks";

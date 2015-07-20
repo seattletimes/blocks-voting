@@ -17,6 +17,7 @@ var templateFile = require("./_popup.html");
 ich.addTemplate("popup", templateFile);
 
 var onEachFeature = function(feature, layer) {
+  feature.properties.roundedDollars = feature.properties.Dollars_pe.toFixed(2);
   layer.bindPopup(ich.popup(feature.properties))
 };
 
