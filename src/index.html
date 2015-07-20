@@ -4,7 +4,7 @@
   <title><%= json.project.title %></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <% /*= t.include("partials/_adHead.html") */ %>
 
@@ -29,35 +29,35 @@
     <a class="type-button" data-type="nhw_pop">Non-Hispanic white<span class="smallbutton">Higher than 85%</span></a> 
     <a class="type-button" data-type="med_hh">Median household income<span class="smallbutton">Greater than $110,000</span></a> 
   </div>
-<div class="map-box">
-  <div class="aspect-ratio-outer">
-    <div class="aspect-ratio-inner">
+  <div class="map-box">
+    <div class="aspect-ratio-outer">
+      <div class="aspect-ratio-inner">
 
-      <leaflet-map zoom=11>
+        <leaflet-map zoom=11>
         <tile-layer layer="cartoPositron"></tile-layer>
       </leaflet-map>
 
     </div>
   </div>
 
-  <!-- <aside class="legend">
-    <div id ="titletext" class="bigheader">Map legend</div>
+  <aside class="legend">
+    <h1>Dollars contributed per person by block group</h1>
     <ul class="scale">
-      <li> <span class="block" style="background-color: #f9f8cf"></span><span id= "text5"> Lime</span>
-      <li> <span class="block" style="background-color: #a4d6b2"></span><span id= "text4"> Lime</span>
-      <li> <span class="block" style="background-color: #6cc1cd"></span> <span id= "text3">Lemon</span>
-      <li> <span class="block" style="background-color: #006eaa"></span><span id ="text2">Orange</span>
-      <li><span class="block" style="background-color: #0a3555"></span><span id= "text1">Cherry</span>
-      <!-- <hr>
-      <li> <span class="block" style="background-color: #bc8cbe"></span><span id= ""> Dog parks</span> -->
-   <!--  </ul>
-    <cite class="source">Sources: Seattle Animal Shelter, Nielsen <span class="legend-credit">Map by Garland Potts / The Seattle Times</span></cite>
-  </aside> --> 
-</div>
-  </responsive-child>
+      <div class="legend-container">
+        <li > <span class="block" style="background-color: #DDF4E9;"></span> $0.00 - $2.36
+          <li > <span class="block" style="background-color: #A7CEB4;"></span> $2.37 - $6.14
+            <li > <span class="block" style="background-color: #4C855F;"></span> $6.15 - $12.47
+              <li > <span class="block" style="background-color: #0F3F18;"></span> $12.48 - $31.03
+        
+         </div>
+       </ul>
+       <cite class="source">Source: Xxxxx Xxxx <span class="credit">GARLAND POTTS / THE SEATTLE TIMES</cite>
+     </aside>
+   </div>
+ </responsive-child>
 
-  <script src="app.js"></script>
-  <% /*= t.include("partials/_adFoot.html"); */ %>
-  <%= t.include("partials/_workHere.html") %>
+ <script src="app.js"></script>
+ <% /*= t.include("partials/_adFoot.html"); */ %>
+ <%= t.include("partials/_workHere.html") %>
 </body>
 </html>
