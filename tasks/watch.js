@@ -15,7 +15,8 @@ module.exports = function(grunt) {
   grunt.config.merge({
     watch: {
       options: {
-        livereload: true
+        livereload: true,
+        spawn: false
       },
       less: {
         files: ["src/**/*.less"],

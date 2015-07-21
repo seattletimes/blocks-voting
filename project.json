@@ -5,8 +5,8 @@
       "path": "contribution-map"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2015/politics/contribution-map"
     }
   },
   "title": "",

@@ -13,6 +13,7 @@
 
 @import "seattletimes";
 @import "values";
+@import "flexbox";
 
 body {
   font-family: @df-sans;
@@ -32,7 +33,8 @@ body {
   font-size: 15px;
   color: @df-dark-gray;
   font-family: @df-serif;
-  text-align: center;
+  margin: auto;
+  max-width: 630px;
 }
 
 .aspect-ratio-outer {
@@ -151,6 +153,7 @@ body {
   display: flex;
    display:-webkit-flex;
    display:-moz-flex;
+   .flex-wrap(wrap);
 
    @media @tablet {
     font-size: 14px;
@@ -165,13 +168,12 @@ body {
   }
 
   & > a, & > label {
-    max-width: 33%;
     display: inline-block;
     vertical-align: bottom;
     flex: 1;
     -webkit-flex:1;
     text-align: center;
-    margin: 4px;
+    border: 4px solid white;
 
     @media @mobile {
     }
@@ -276,16 +278,18 @@ body {
   }
 
   & > a, & > label {
-    max-width: 25%;
     display: inline-block;
     vertical-align: bottom;
     flex: 1;
     -webkit-flex:1;
     text-align: center;
-    margin: 4px;
+    .display-flex();
+    .flex-direction(column);
+    .justify-content(center);
 
     @media @mobile {
       .fa { display: none; }
+      .flex(0 0 50%);
     }
   }
 }
